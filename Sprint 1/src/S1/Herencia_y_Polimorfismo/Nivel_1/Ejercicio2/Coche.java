@@ -1,4 +1,4 @@
-package S1.Herencia.Nivel_1.Ejercicio2;
+package S1.Herencia_y_Polimorfismo.Nivel_1.Ejercicio2;
 import java.util.Scanner;
 public class Coche {
     private static final String marca;

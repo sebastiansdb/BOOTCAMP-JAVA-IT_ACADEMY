@@ -1,4 +1,4 @@
-package S1.Herencia.Nivel_1.Ejercicio1;
+package S1.Herencia_y_Polimorfismo.Nivel_1.Ejercicio1;
 
 public class App1 {
 

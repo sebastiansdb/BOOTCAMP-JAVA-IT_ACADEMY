@@ -1,4 +1,4 @@
-package S1.Herencia.Nivel_2.Ejercicio1.Clases;
+package S1.Herencia_y_Polimorfismo.Nivel_2.Ejercicio1.Clases;
 
 public class Telefono {
 
