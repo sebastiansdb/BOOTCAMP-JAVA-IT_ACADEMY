@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class App3 {
 
+    static  Scanner sc = new Scanner(System.in);
     public static void main (String[] args)
     {
-        Scanner sc = new Scanner(System.in);
         HashMap<String,String> countriesAndCapitals;
         String userName;
         byte userPunctuation;
@@ -17,17 +17,27 @@ public class App3 {
                 "src/S1/Collections/Nivel_1/Ejercicio3/Puntuaciones.txt";
         // Leo archivo txt
         countriesAndCapitals = ReadFile.txtFileToHashMap(fileRoute);
-        System.out.println("Introduce nombre de Usuario");
-        userName = sc.nextLine();
+        userName = askName();
         // Pregunto al usuario
         userPunctuation = survey (countriesAndCapitals);
         WriteFile.writeFile(userName,userPunctuation,fileOutRoute);
+        System.out.println("Tu puntuación final es: " + userPunctuation);
     }
 
-    // Crea numero aleatorio entre 0 y 51 (Cantidad de paises que hay en el archivo .txt)
-    static int randomBetween (int min, int max){
+    public static String askName ()
+    {
+        String ret;
+        System.out.println("Introduce nombre de Usuario");
+        ret = sc.nextLine();
+        return ret;
+    }
+
+    // Crea numero aleatorio entre "min" y "max" = 51 (Cantidad de paises que hay en el archivo .txt)
+    static int randomBetween (int min, int max)
+    {
         return (int) (Math.random() * (max+1-min)) + min;
     }
+
     public static byte survey(HashMap<String,String> countriesAndCapitals){
         Scanner sc = new Scanner(System.in);
         byte userPunctuation = 0;

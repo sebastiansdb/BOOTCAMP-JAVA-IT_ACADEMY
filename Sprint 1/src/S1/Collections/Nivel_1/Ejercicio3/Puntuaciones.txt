@@ -13,3 +13,5 @@ luis - 0
 alvaro - 0
 Toto - 0
 patricia - 0
+Lluisa - 0
+Api - 1
