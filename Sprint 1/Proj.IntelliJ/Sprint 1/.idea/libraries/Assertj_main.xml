@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Assertj-main">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/.mvn/wrapper" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-core/src/main/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-core/src/test/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-guava/src/main/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-guava/src/test/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-tests/assertj-integration-tests/assertj-core-java-17/src/test/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-tests/assertj-integration-tests/assertj-core-junit4-with-opentest4j/src/test/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-tests/assertj-integration-tests/assertj-core-osgi/src/test/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-tests/assertj-integration-tests/assertj-core-testng-with-junit4/src/test/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/Assertj-main/assertj-tests/assertj-performance-tests/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

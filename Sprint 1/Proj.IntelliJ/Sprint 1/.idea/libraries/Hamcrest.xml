@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Hamcrest">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/docs/javadoc/1.3" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/docs/javadoc/2.0.0.0" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/docs/javadoc/2.1" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/docs/javadoc/2.2" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/hamcrest-core/src/main/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/hamcrest-integration/src/main/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/hamcrest-library/src/main/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/hamcrest/src/main/java" />
+      <root url="file://$USER_HOME$/Librerias IntelliJ Idea/JavaHamcrest-master/hamcrest/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
