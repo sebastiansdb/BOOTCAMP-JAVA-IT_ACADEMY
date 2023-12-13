@@ -19,7 +19,4 @@ public class OrderedMonths {
         this.sortedMonths.add("Noviembre");
         this.sortedMonths.add("Diciembre");
     }
-
-    // No implemento getters and setters porque no son necesarios para lo que pide el ejercicio.
-
 }
