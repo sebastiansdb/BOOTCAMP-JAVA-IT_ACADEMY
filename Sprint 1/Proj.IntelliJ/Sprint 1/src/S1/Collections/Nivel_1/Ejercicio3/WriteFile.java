@@ -2,6 +2,7 @@ package S1.Collections.Nivel_1.Ejercicio3;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class WriteFile {
 
@@ -23,8 +24,8 @@ public class WriteFile {
                 writer.write(username + " - " + userPuctuation);
             }
         }   //Si existe un problema al escribir cae aqui
-        catch (Exception e){
-            System.out.println("Error al escribir");
+        catch (IOException e){
+            System.out.println("Error al escribir" + e.getMessage());
         }
         finally
         {
@@ -32,7 +33,7 @@ public class WriteFile {
             {
                 writer.close();
 
-            } catch (Exception e){
+            } catch (IOException e){
                 e.printStackTrace();
             }
         }

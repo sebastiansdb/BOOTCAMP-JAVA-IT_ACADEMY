@@ -41,15 +41,14 @@ public class Restaurant implements Comparable<Restaurant>  {
 
     public int compareTo (Restaurant restaurant)
     {
-
         int nameFlag = this.name.compareToIgnoreCase(restaurant.getName());
         if ( nameFlag == 0 )
         {
             // Si los nombres son iguales, entonces:
             return Integer.compare(this.punctuation, restaurant.punctuation);
             /**
-             * ESTO NO ES PARTE DEL EJERCICIO.
-             Encontré otra manera de la comparacion de la "puntuación", que es con la resta de los atributos. Lo dejo
+             *                                          ESTO NO ES PARTE DEL EJERCICIO.
+             Encontré otra manera para la comparacion de la "puntuación", que es con la resta de los atributos. Lo dejo
              comentado para acordarme:
 
             //return restaurant.getPunctuation() - this.punctuation ; // Si lo pongo así, me los ordena en orden ascendente ¿POR QUE?

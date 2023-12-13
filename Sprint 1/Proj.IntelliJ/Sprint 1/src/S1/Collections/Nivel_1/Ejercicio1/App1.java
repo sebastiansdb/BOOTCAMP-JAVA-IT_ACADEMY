@@ -19,7 +19,6 @@ public class App1 {
         Month m10 = new Month("Octubre");
         Month m11 = new Month("Noviembre");
         Month m12 = new Month("Diciembre");
-        //ArrayList<Month> months = new ArrayList<>(m1,m2,m3,m4,m5,m6,m7,m9,m10,m11,m12);       // Asi no esta bien
         ArrayList<Month> months = new ArrayList<>();
         months.add(m1);
         months.add(m2);

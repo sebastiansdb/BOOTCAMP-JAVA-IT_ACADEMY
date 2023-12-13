@@ -2,6 +2,7 @@ package S1.Collections.Nivel_1.Ejercicio3;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class ReadFile {
@@ -20,8 +21,8 @@ public class ReadFile {
                 countriesMap.put(words[0], words[1]);
             }
         //Si existe un problema al leer cae aqui
-        } catch (Exception e) {
-            System.out.println("Error al leer el archivo");
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo" + e.getMessage());
         }
         finally
         {
@@ -29,7 +30,7 @@ public class ReadFile {
             {
                 b.close();
                 f.close();
-            } catch (Exception e){
+            } catch (IOException e){
                 e.printStackTrace();
             }
         }

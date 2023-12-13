@@ -12,8 +12,8 @@ public class S1_N1_T8_Ejercicio4 {
     }
     public static void imprimirMesesMetodoReferencia(List<String> meses){
         /**
-         * System.out::println es una referencia a método que se pasa como argumento a forEach. Aquí, println es un
-         * método estático de la clase System, y out es un objeto de tipo PrintStream.
+         * "System.out::println" es una referencia a método que se pasa como argumento a forEach. Aquí, println es un
+         * método estático de la clase "System", y "out" es un objeto de tipo PrintStream.
          * System.out::println se puede leer como "referencia al método println de la clase System.out".
          *
          * En este caso, la referencia a método se utiliza para proporcionar la implementación de la interfaz funcional
@@ -25,11 +25,12 @@ public class S1_N1_T8_Ejercicio4 {
 }
 
 /**
- * DOCUMENTACION
+ **                                                        DOCUMENTACION                                              **
+
  * (Podemos ver la implementacion de este código en el paquete "Ejemplo")
 
- * Una interfaz es funcional, significa que tiene exactamente un método abstracto. A partir de Java 8, las interfaces
- * funcionales son esenciales para el soporte de expresiones lambda y referencias de método.
+ * Cuando una interfaz es funcional, significa que tiene exactamente un método abstracto. A partir de Java 8, las
+ * interfaces funcionales son esenciales para el soporte de expresiones lambda y referencias de método.
  * Ejemplo:
 
   @FunctionalInterface
