@@ -4,9 +4,7 @@ import org.hamcrest.FeatureMatcher;
 import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Test;
-
 import static org.hamcrest.core.Is.is;
-
 
 class CheckLongitudStringTest {
 
@@ -23,7 +21,7 @@ class CheckLongitudStringTest {
          *  "QUE ES ESTO" es otra parte de la descripción en caso de fallo.
          */
 
-        return new FeatureMatcher<String, Integer>(matcher, "Las longitudes no coinciden",
+        return new FeatureMatcher<String, Integer>(matcher, "Check Longitud Palabra ",
                 "Longitud incorrecta: ") {
             /**
              * La classe abstracta "FeatureMatcher" contiene el metodo abstracto "FeatureValueOf". Éste se implementa
