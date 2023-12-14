@@ -6,14 +6,7 @@ public class S1_T5_N1_Ejercicio1 {
     public static void main (String [] args) {
         String route = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/Proj.IntelliJ/Sprint 1/src/S1/Java_Utils" +
                 "/Nivel_1/Directorio Ejemplo";
-        if (args.length > 0) {
-            route = args[0];
-        }
-
-        // Es null o que vlor tiene args?
-        if (args == null) {
-            System.out.println("Contenido del directorio: " + "\n");
-        }
+        System.out.println("Contenido del directorio: " + "\n");
         alfaphabeticListerPrinter(route);
     }
     public static void alfaphabeticListerPrinter(String fileRoute)
