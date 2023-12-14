@@ -9,9 +9,10 @@ import java.util.Arrays;
 public class S1_T5_N1_Ejercicio3 {
 
     public static void main(String[] args) {
-        String route = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/src/S1/Java_Utils/Nivel_1/Ejercicio3/Directorio Ejemplo";
-        String resultsRoute = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/src/S1/Java_Utils/Nivel_1/" +
-                "Ejercicio3/ListadoArbolFicheros";
+        String route = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/Proj.IntelliJ/Sprint 1/src/S1/Java_Utils/" +
+                "Nivel_1/Directorio Ejemplo";
+        String resultsRoute = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/Proj.IntelliJ/Sprint 1/src/S1" +
+                "/Java_Utils/Nivel_1/Ejercicio3/ListadoArbolFicheros.txt";
         FileWriter writer = null;
         try {
             writer = new FileWriter(resultsRoute);

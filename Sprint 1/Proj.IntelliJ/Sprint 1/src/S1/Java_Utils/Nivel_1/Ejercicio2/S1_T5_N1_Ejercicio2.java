@@ -7,12 +7,12 @@ import java.util.Arrays;
 public class S1_T5_N1_Ejercicio2 {
 
     public static void main (String [] args) {
-        String route = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/src/S1/Java_Utils/Nivel_1/Ejercicio3/Directorio Ejemplo";
+        String route = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/Proj.IntelliJ/Sprint 1/src/S1/Java_Utils/" +
+                "Nivel_1/Directorio Ejemplo";
         alfaphabeticTreeListerAndPrinter(route);
     }
     public static void alfaphabeticTreeListerAndPrinter(String fileRoute)
     {
-       try {
            File actualDirectory = new File(fileRoute);
            // Check que exista el directorio/path a leer y que no sea un archivo
            if (actualDirectory.exists() && !actualDirectory.isFile()) {
@@ -34,10 +34,6 @@ public class S1_T5_N1_Ejercicio2 {
            } else {
                System.out.println("La ruta '" + fileRoute + "' no existe o no es un directorio valido");
            }
-       } catch (SecurityException e)
-       {
-           System.out.println("Error al leer el directorio: " + e.getMessage());
-       }
     }
 
     public static String lastFileModification(File file)
