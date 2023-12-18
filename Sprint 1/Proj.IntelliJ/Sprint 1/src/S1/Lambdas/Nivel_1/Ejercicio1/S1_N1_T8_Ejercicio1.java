@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 public class S1_N1_T8_Ejercicio1 {
 
     public static void main(String[] args) {
-        List<String> listaString  = new ArrayList<> (Arrays.asList("papa","uno", "dos", "tres", "cuatro", "cinco","seis") );
+        List<String> listaString  = new ArrayList<> (Arrays.asList("papa","unO", "dos", "tres", "cuatro", "cinco","seis") );
         List<String> listaStringFiltrada = PalabrasConO(listaString);
         // Opcion 1: imprimir en el main
         for(String s: listaStringFiltrada)
@@ -34,7 +34,7 @@ public class S1_N1_T8_Ejercicio1 {
      * El compilador entiende que el argumento "l" de la Lambda, son cada uno de los elementos del objeto "listaString",
      * o sea, quien invoca al metodo "filter".
      */
-        Stream<String> listaStream = listaString.stream().filter(l -> l.contains("o"));
+        Stream<String> listaStream = listaString.stream().filter(l -> (l.contains("o")||l.contains("O")));
         // Ahora transformo el objeto Stream obtenido en una Lista
         List<String> listaFiltrada = listaStream.toList();
         return listaFiltrada;

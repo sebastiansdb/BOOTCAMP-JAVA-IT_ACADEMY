@@ -4,7 +4,7 @@ public class TrabajadorPresencial extends Trabajador {
     private static int benzina;
 
     // Definir las varibales estaticas en el bloque estatico. Aporta mayor claridad al codigo.
-    static{
+    static {
         benzina = 10;
     }
 

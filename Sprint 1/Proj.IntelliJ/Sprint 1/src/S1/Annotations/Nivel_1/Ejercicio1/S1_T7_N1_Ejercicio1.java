@@ -3,8 +3,6 @@ package S1.Annotations.Nivel_1.Ejercicio1;
 public class S1_T7_N1_Ejercicio1 {
     @SuppressWarnings("deprecation")
     public static void main(String[] args){
-
-        // Es necesario crear objeto de clase TRABAJADOR tambien? por que?
         TrabajadorOnline tO1 = new TrabajadorOnline("Juan", "Perez", 100);
         TrabajadorPresencial tP1 = new TrabajadorPresencial("Juan", "Gonzales",120);
 

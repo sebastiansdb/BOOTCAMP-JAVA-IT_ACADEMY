@@ -11,16 +11,32 @@ public class S1_N1_T8_Ejercicio4 {
         imprimirMesesMetodoReferencia(meses);
     }
     public static void imprimirMesesMetodoReferencia(List<String> meses){
+        meses.forEach(System.out::println);
         /**
          * "System.out::println" es una referencia a método que se pasa como argumento a forEach. Aquí, println es un
          * método estático de la clase "System", y "out" es un objeto de tipo PrintStream.
-         * System.out::println se puede leer como "referencia al método println de la clase System.out".
+         * System.out::println se puede leer como "referencia al método println de la clase "PrintStream" (System es
+         * una classe y "out" es un atributo de la misma, el cual es de tipo "PrintStream". La Clase "PrintStream" tiene
+         * el metodo "println".
+         * Bosquejo de las clases:
          *
-         * En este caso, la referencia a método se utiliza para proporcionar la implementación de la interfaz funcional
-         * Consumer. La interfaz funcional Consumer tiene un método abstracto llamado accept, que toma un argumento y
-         * realiza alguna acción sin devolver ningún resultado. En este caso, System.out::println implementa ese método.
+         * //the System class belongs to java.lang package
+         * class System {
+         *   public static final PrintStream out;
+         *   //...
+         * }
+         *
+         * //the Prinstream class belongs to java.io package
+         * class PrintStream{
+         * public void println();
+         * //...
+         * }
+         *
+         * En este caso (metodo forEach), la referencia a método se utiliza para proporcionar la implementación de la interfaz funcional
+         * Consumer. Dicha interfaz tiene un método abstracto llamado accept, que toma un argumento y
+         * realiza alguna acción sin devolver ningún resultado. En este caso, la instruccion System.out::println
+         * implementa ese método.
          */
-        meses.forEach(System.out::println);
     }
 }
 

@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class WriteFile {
-
     public static void writeFile (String username, byte userPuctuation, String ruta)
     {
         //Crear un objeto File. Se encarga de crear o acceder a un archivo, el cual se especifica en su constructor.
@@ -29,12 +28,13 @@ public class WriteFile {
         }
         finally
         {
-            try
-            {
-                writer.close();
-
-            } catch (IOException e){
-                e.printStackTrace();
+            if (writer != null) {
+                try
+                {
+                    writer.close();
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
             }
         }
     }

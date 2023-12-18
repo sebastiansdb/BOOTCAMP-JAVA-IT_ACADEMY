@@ -26,15 +26,17 @@ public class ReadFile {
         }
         finally
         {
-            try
-            {
-                b.close();
-                f.close();
-            } catch (IOException e){
-                e.printStackTrace();
+            // No me aseguro que "f != null" porque, en este punto, f nunca será null.
+            if (b != null) {
+                try
+                {
+                    b.close();
+                    f.close();
+                } catch (IOException e){
+                    System.out.println("Error al cerrar el archivo: " + e.getMessage());
+                }
             }
         }
         return countriesMap;
     }
-
 }

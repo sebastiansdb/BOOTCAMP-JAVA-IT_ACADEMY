@@ -57,13 +57,25 @@ public class CsvFileHandler {
                    datesRead.add(new Persona(lineElements[0], lineElements[1], lineElements[2]));
                }
            }
-           reader.close();
            line = null;
            lineElements = null;
         } catch(Exception e) {
         System.out.println("Error al leer el archivo\n");
         e.printStackTrace();
        }
+        finally
+        {
+            if(reader != null)
+            {
+                try
+                {
+                    reader.close();
+                }catch(IOException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
        return datesRead;
     }
 
@@ -81,10 +93,22 @@ public class CsvFileHandler {
                 FileWriter fileToWrite = new FileWriter (file);
                 writer = new BufferedWriter(fileToWrite);
                 writer.write(textToWrite);
-                writer.close();
             }
         } catch (Exception e) {
             System.out.println("Error al escribir el archivo");
+        }
+        finally
+        {
+            if(writer != null)
+            {
+                try
+                {
+                    writer.close();
+                }catch(IOException e)
+                {
+                    System.out.println("Error al cerrar el archivo" + e.getMessage());
+                }
+            }
         }
     }
 }

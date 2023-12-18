@@ -1,6 +1,6 @@
 package S1.Generics.Nivel_1.Ejercicio2;
 
-public class    Persona {
+public class Persona {
     String name;
     String surname;
     int age;

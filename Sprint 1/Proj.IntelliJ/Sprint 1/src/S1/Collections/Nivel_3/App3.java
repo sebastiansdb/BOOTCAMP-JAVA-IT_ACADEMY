@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class App3 {
 
     public static void main(String[] args) {
-        String fileRoute = "/Users/sebastian/Coding/Java/IT_Academy/Java/Java con Spring Framework/Sprint 1/src/S1/Collections/Nivel3/Lista.txt";
+        String fileRoute = "Lista.txt";
         CsvFileHandler csvHandler = new CsvFileHandler(fileRoute);
         String userDates;
 

@@ -1,7 +1,8 @@
 package S1.Generics.Nivel_2.Ejercicio1y2;
 import java.util.List;
 public class GenericsMethodsN2 {
-    /**
+    /**                                                     TEORIA                                                **
+
      * ¿¿ Es buena práctica declarar el constructor vacio, sabiendo que no necesitaré atributos de la clase o
      * ejecutar codigo alguno dentro del mismo?
      * ¿¿ O mejor no escribirlo en estos casos??
