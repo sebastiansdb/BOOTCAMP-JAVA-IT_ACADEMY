@@ -16,8 +16,16 @@ public class CalculoDniTest
      * LETRA 	T 	R 	W 	A 	G 	M 	Y 	F 	P 	D 	X 	B   N 	J 	Z 	S 	Q 	V 	H 	L 	C 	K 	E
      */
 
+
+    /**
+     * TEST PARAMETRIZADO
+
+     * Se usa cuando debemos ejecutar un test N veces, es decir, el mismo test con una cantidad N de parámetros
+     * distintos.
+     */
+
     @ParameterizedTest
-    @MethodSource (value = "getData") // Nombre del metodo que contiene los parámetros para ejecutar el test
+    @MethodSource (value = "getData") // Nombre del metodo "proveedor" que contiene los parámetros para ejecutar el test
     @DisplayName(value = "::: Test - 'Dado un numero específico de DNI, corroborar su letra' :::")
     public void testLetrasyNumerosDni(char letraEsperada, int dniTest)
     {
