@@ -1,0 +1,108 @@
+1. Type a query to display all documents in the Restaurants collection
+db.restaurants.find()
+
+2. Type a query to display the restaurant_id, name, borough, and cuisine for all documents in the Restaurants collection.
+db.restaurants.find({},{restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
+
+3. Type a query to display the restaurant_id, name, borough, and cuisine, but exclude the _id field for all documents in the Restaurants collection.
+db.restaurants.find({},{restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+
+
+4. Type a query to display restaurant_id, name, borough, and zip code, but exclude the _id field for all documents in the Restaurants collection
+db.restaurants.find({},{restaurant_id: 1, name: 1, borough: 1, "address.zipcode": 1, _id: 0})
+
+5. Write a query to show all restaurants that are in the Bronx.
+db.restaurants.find({borough: “Bronx”}, {name:1, borough: 1, _id :0})
+
+6. Write a query to show the top 5 restaurants that are in the Bronx.
+db.restaurants.find({borough: “Bronx”}, {name:1, borough: 1, _id :0}).limit (5)
+
+7. Write a query to show the next 5 restaurants after skipping the top 5 in the Bronx.
+db.restaurants.find({borough: “Bronx”}, {name:1, borough: 1, _id :0}).skip(5).limit(5)
+
+8. Write a query to find restaurants that have a score of more than 90.
+db.restaurants.find({"grades.score": {$gt: 90}})
+
+9. Write a query to find restaurants that have a score of more than 80 but less than 100.	
+db.restaurants.find({ "grades.score": {$gt: 80, $lt: 100 } })
+
+10. Type a query to find restaurants that are located in latitude value less than -95.754168.
+db.restaurants.find({ "address.coord": {$lt: -95.754168} })
+
+11. Write a MongoDB query to find restaurants that do not prepare any 'American' cuisine and their rating is greater than 70 and length less than -65.754168.
+db.restaurants.find({ $and:[ { "cuisine": {$ne: "American"} }, { "grades.score": {$gt: 70} }, { "address.coord":{$lt: -65.754168} } ] })
+
+12. Type a query to find restaurants that do not prepare any 'American' cuisine and got a score over 70 and located at length less than -65.754168. Note: Do this query without using $and operator.
+db.restaurants.find({ "cuisine": {$ne: "American"} , "grades.score": {$gt: 70}, "address.coord":{$lt: -65.754168} })
+
+13. Type a query to find restaurants that don't prepare any 'American' cuisine, earned a grade point 'A' and  doesn't belong in Brooklyn. The document must be displayed according to the cuisine in descending order.
+db.restaurants.find({ "cuisine": {$ne: "American"}, "grades.grade": "A", "borough": {$ne: "Brooklyn"} }).sort({cuisine: -1})
+
+14. Type a query to find the restaurant_id, name, borough and cuisine for those restaurants that contain 'Wil' as the first three letters in their name.
+db.restaurants.find({name: {$regex: "^Wil"}}, {"restaurant_id": 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+
+15. Type a query to find the restaurant_id, name, borough and cuisine for those restaurants that contain 'ces' as the last three letters in their name.
+db.restaurants.find({name: {$regex: "ces$"}}, {"restaurant_id": 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+
+16. Type a query to find the restaurant_id, name, borough and cuisine for those restaurants that contain 'Reg' as three letters somewhere in their name.
+db.restaurants.find({name: {$regex: "reg", $options: "i"}}, {"restaurant_id": 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+
+Note: $options: “i" is used to match both lower case and upper case pattern in the given string(i.e., “reg”).
+
+17. Write a query to find the restaurants that belong in the Bronx and prepared any American or Chinese dish.
+db.restaurants.find({ borough: "Bronx", cuisine: { $in:[ "American", “Chinese"]} })
+
+18. Type a query to find the restaurant_id, name, borough and cuisine for those restaurants that belong to Staten Island or Queens or Bronx or Brooklyn.
+db.restaurants.find({ borough: { $in:[  "Staten Island", "Queens", "Bronx", "Brooklyn"]} }, { "restaurant_id": 1, name: 1, borough: 1, cuisine: 1, _id: 0 })
+
+19. Type a query to find the restaurant_id, name, borough, and cuisine for those restaurants that don't belong in Staten Island or Queens or Bronx or Brooklyn.
+db.restaurants.find({ borough: { $nin:[  "Staten Island", "Queens", "Bronx", "Brooklyn"]} }, { "restaurant_id": 1, name: 1, borough: 1, cuisine: 1, _id: 0 })
+
+20. Type a query to find the restaurant_id, name, borough and cuisine for those restaurants that get a score that is no more than 10.
+db.restaurants.find({ "grades.score": {$lte: 10} }, { "restaurant_id": 1, name: 1, borough: 1, cuisine: 1, _id: 0 })
+
+21. Type a query to find the restaurant_id, name, borough and cuisine for those restaurants that prepare fish except 'American' and 'Chinees' or the restaurant name starts with letters ‘Wil'.
+db.restaurants.find({$or: [{cuisine: "Fish", name: {$ne: /^Wil/}, cuisine: {$nin: ["American ", "Chinese"]}}]}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+
+22. Write a query to find the restaurant_id, name, and grades for those restaurants that achieve a grade “A” and a score of 11 in ISODate study data “2014-08-11T 00:00:00 Z”.
+db.restaurants.find({ "grades": { $elemMatch: { "date":ISODate("2014-08-11T00:00:00Z"), "grade": "A", "score": 11} }},{"grades.grade": "A", "grades.score": 11}, {restaurant_id: 1, name: 1, grades: 1, _id: 0})
+
+
+23. Write a query to find the restaurant_id, name, and grades for those restaurants where the 2nd grade variety item contains a grade of “A” and marker 9 over an ISODate “2014-08-11T 00:00:00 Z”.
+db.restaurants.find({ "grades.1.grade": "A", "grades.1.score": 9, "grades.1.date": ISODate("2014-08-11T00:00:00Z")}, { "restaurant_id": 1, "name": 1, "grades": 1 })
+
+24. Write a query to find the restaurant_id, name, address and geographic location for those restaurants where the second element of the coord array contains a value that is greater than 42 and up to 52.
+
+db.restaurants.find({ "address.coord.1": {$gt: 42,$lte: 52} }, { "restaurant_id": 1, "name": 1, "address": 1, "coord": 1 })
+
+25. Write a query to arrange the name of the restaurants in ascending order along with all the columns.
+db.restaurants.find().sort({"name": 1})
+
+26. Write a query to arrange the name of the restaurants in descending order along with all the columns.
+db.restaurants.find().sort({"name": -1})
+
+27. Write a query to organize the name of the cuisine in ascending order and by the same cuisine neighborhood in descending order.
+db.restaurants.find().sort({cuisine: 1, borough: -1})
+
+28. Write a query to find out all the addresses that do not contain the street.
+db.restaurants.find({"address.street": {$exists: false}})
+
+29. Write a query that will select all documents in the restaurant collection where the value of the coord field is Double.
+db.restaurants.find({"address.coord": {$type: "double"}})
+
+30. Write a query that will select the restaurant_id, name, and grade for those restaurants that return 0 as a subtraction after dividing the marker by 7.
+db.restaurants.find({"grades.score": {$mod: [7, 0]}}, {restaurant_id: 1, name: 1, grades: 1, _id: 0})
+
+
+31. Type a query to find the restaurant name, borough, longitude and altitude and cuisine for those restaurants that contain 'mon' as three letters somewhere in their name.
+db.restaurants.find({ name: {$regex: "mon", $options: "i"} }, {name: 1, borough: 1, "address.coord": 1, cuisine: 1, _id: 0})
+
+Option 2:
+db.restaurants.find({name: /.*mon.*/}, {name: 1, borough: 1, "address.coord": 1, cuisine: 1, _id: 0})
+
+
+32. Type a query to find the restaurant name, borough, longitude and latitude and cuisine for those restaurants that contain 'Mad' as the first three letters of their name.
+db.restaurants.find({ "name": {$regex: "mad", $options: "i"} },  { "name": 1, "borough": 1, "coord": 1, "cuisine": 1 })
+
+Option 2:
+db.restaurants.find({"name": { $regex: /^Mad/i } }, { "name": 1, "borough": 1, "coord": 1, "cuisine": 1 })
