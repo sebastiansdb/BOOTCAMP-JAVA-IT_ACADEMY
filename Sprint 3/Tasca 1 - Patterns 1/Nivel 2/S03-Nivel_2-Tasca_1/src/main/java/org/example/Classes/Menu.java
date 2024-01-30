@@ -9,7 +9,7 @@ public class Menu
     public static void runMenu (ArrayList<Contact> contacts)
     {
         Scanner sc = new Scanner (System.in);
-        int option = 1;
+        int option;
         String contactName;
         ContactListFactory addressFactory = new AddressFactory();
         ContactListFactory phoneFactory = new PhoneFactory();

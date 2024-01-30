@@ -41,7 +41,7 @@ public class Undo
 
     public static void removeLastCommand ()
     {
-        if (commandHistory.isEmpty())
+        if (!commandHistory.isEmpty())
         {
             commandHistory.remove(commandHistory.size() -1 );
         }
@@ -49,7 +49,8 @@ public class Undo
 
     public static void listCommands()
     {
-        for (int i = 0; i<commandHistory.size(); i++)
-        System.out.println("Command " + (i+1) + ": " + commandHistory.get(i));
+        for (int i = 0; i<commandHistory.size(); i++) {
+            System.out.println("Command " + (i + 1) + ": " + commandHistory.get(i));
+        }
     }
 }
