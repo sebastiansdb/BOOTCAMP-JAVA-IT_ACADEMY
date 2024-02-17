@@ -4,8 +4,7 @@ import java.io.File;
 import java.util.Arrays;
 public class S1_T5_N1_Ejercicio1 {
     public static void main (String [] args) {
-        String route = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/Proj.IntelliJ/Sprint 1/src/S1/Java_Utils" +
-                "/Nivel_1/Directorio Ejemplo";
+        String route = "Directorio Ejemplo Java Utils";
         System.out.println("Contenido del directorio: " + "\n");
         alfaphabeticListerPrinter(route);
     }

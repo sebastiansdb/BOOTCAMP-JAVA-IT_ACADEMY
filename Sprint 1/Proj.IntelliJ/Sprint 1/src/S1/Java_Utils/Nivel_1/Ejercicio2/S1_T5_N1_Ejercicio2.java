@@ -7,8 +7,7 @@ import java.util.Arrays;
 public class S1_T5_N1_Ejercicio2 {
 
     public static void main (String [] args) {
-        String route = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/Proj.IntelliJ/Sprint 1/src/S1/Java_Utils/" +
-                "Nivel_1/Directorio Ejemplo";
+        String route = "Directorio Ejemplo Java Utils";
         alfaphabeticTreeListerAndPrinter(route);
     }
     public static void alfaphabeticTreeListerAndPrinter(String fileRoute)

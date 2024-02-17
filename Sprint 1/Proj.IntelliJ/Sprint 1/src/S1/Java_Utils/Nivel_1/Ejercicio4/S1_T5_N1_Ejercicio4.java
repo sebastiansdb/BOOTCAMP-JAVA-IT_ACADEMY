@@ -11,8 +11,7 @@ public class S1_T5_N1_Ejercicio4 {
      * Leer y mostrar por pantalla archivo de texto
      */
     public static void main(String[] args) {
-        String fileToRead = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/Proj.IntelliJ/Sprint 1/src/S1" +
-                "/Java_Utils/Nivel_1/Ejercicio3/ListadoArbolFicheros.txt";
+        String fileToRead = "ListadoArbolFicheros.txt";
         System.out.println("Leer y mostrar por pantalla archivo de texto 'ListadoArbolFicheros.txt':\n");
         txtToArrayListAndPrint(fileToRead);
     }

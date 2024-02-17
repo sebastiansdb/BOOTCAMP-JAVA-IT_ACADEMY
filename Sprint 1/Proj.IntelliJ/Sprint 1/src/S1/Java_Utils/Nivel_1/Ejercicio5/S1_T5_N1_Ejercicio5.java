@@ -22,9 +22,7 @@ public class S1_T5_N1_Ejercicio5 {
      * que pueden lanzar excepciones
      */
     public static void main(String[] args) {
-        String serializeRoute = "/Users/sebastian/Coding/Bootcamp IT Academy/Sprint 1/Proj.IntelliJ/Sprint 1/src/S1" +
-                "/Java_Utils/Nivel_1/Ejercicio5/EjercicioSerializar";
-
+        String serializeRoute = "EjercicioSerializar";
         //  "Clase del objeto que se va a Serializar".
         FileData toSer = new FileData("MyFile", "File", "2023-11-26");
         // Serializar
