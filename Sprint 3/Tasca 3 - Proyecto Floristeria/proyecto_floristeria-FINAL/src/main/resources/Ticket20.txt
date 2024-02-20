@@ -1,0 +1,6 @@
+Ticket nº 20
+Date: 2016-06-10
+Product    Name    Description     Price
+Flower: Rosas, Color: Rojo, Price: 15.50€
+Tree: Arce, Heigth: 3.8, Price: 40.60€
+Decoration: Estantería, Material: WOOD, Price: 28.20€

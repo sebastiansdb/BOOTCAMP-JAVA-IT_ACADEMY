@@ -1,0 +1,200 @@
+[{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee19fa"
+  },
+  "totalPrice": 58.2,
+  "date": {
+    "$date": "2015-03-10T00:00:00.000Z"
+  },
+  "productList": "Flower: Rosas, Color: Rojo, Price: 15.50€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee19fb"
+  },
+  "totalPrice": 97.8,
+  "date": {
+    "$date": "2016-07-20T00:00:00.000Z"
+  },
+  "productList": "Decoration: Maceta, Material: PLASTIC, Price: 8.90€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee19fc"
+  },
+  "totalPrice": 45.3,
+  "date": {
+    "$date": "2017-11-05T00:00:00.000Z"
+  },
+  "productList": "Decoration: Sofá, Material: WOOD, Price: 45.30€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee19fd"
+  },
+  "totalPrice": 98.45,
+  "date": {
+    "$date": "2018-04-15T00:00:00.000Z"
+  },
+  "productList": "Decoration: Mesa, Material: WOOD, Price: 45.80€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee19fe"
+  },
+  "totalPrice": 68.7,
+  "date": {
+    "$date": "2019-09-22T00:00:00.000Z"
+  },
+  "productList": "Tree: Roble, Heigth: 4.2, Price: 39.20€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee19ff"
+  },
+  "totalPrice": 37.8,
+  "date": {
+    "$date": "2020-05-10T00:00:00.000Z"
+  },
+  "productList": "Flower: Tulipanes, Color: Amarillo, Price: 18.90€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a00"
+  },
+  "totalPrice": 79.9,
+  "date": {
+    "$date": "2015-01-02T00:00:00.000Z"
+  },
+  "productList": "Decoration: Estantería, Material: PLASTIC, Price: 15.90€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a01"
+  },
+  "totalPrice": 125.3,
+  "date": {
+    "$date": "2016-07-15T00:00:00.000Z"
+  },
+  "productList": "Decoration: Lámpara, Material: WOOD, Price: 30.00€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a02"
+  },
+  "totalPrice": 55.4,
+  "date": {
+    "$date": "2017-11-30T00:00:00.000Z"
+  },
+  "productList": "Tree: Roble, Heigth: 4.2, Price: 39.20€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a03"
+  },
+  "totalPrice": 92,
+  "date": {
+    "$date": "2018-04-20T00:00:00.000Z"
+  },
+  "productList": "Decoration: Maceta, Material: PLASTIC, Price: 8.90€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a04"
+  },
+  "totalPrice": 72.3,
+  "date": {
+    "$date": "2019-08-05T00:00:00.000Z"
+  },
+  "productList": "Decoration: Estantería, Material: WOOD, Price: 55.00€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a05"
+  },
+  "totalPrice": 118.6,
+  "date": {
+    "$date": "2020-01-30T00:00:00.000Z"
+  },
+  "productList": "Tree: Abeto, Heigth: 4.1, Price: 78.90€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a06"
+  },
+  "totalPrice": 67.8,
+  "date": {
+    "$date": "2015-02-15T00:00:00.000Z"
+  },
+  "productList": "Flower: Tulipanes, Color: Amarillo, Price: 18.90€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a07"
+  },
+  "totalPrice": 85.4,
+  "date": {
+    "$date": "2016-06-10T00:00:00.000Z"
+  },
+  "productList": "Tree: Abeto, Heigth: 4.1, Price: 63.70€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a08"
+  },
+  "totalPrice": 42.2,
+  "date": {
+    "$date": "2017-10-25T00:00:00.000Z"
+  },
+  "productList": "Decoration: Lámpara, Material: WOOD, Price: 30.00€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a09"
+  },
+  "totalPrice": 92.6,
+  "date": {
+    "$date": "2018-03-05T00:00:00.000Z"
+  },
+  "productList": "Tree: Roble, Heigth: 4.2, Price: 39.20€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a0a"
+  },
+  "totalPrice": 107.9,
+  "date": {
+    "$date": "2019-07-20T00:00:00.000Z"
+  },
+  "productList": "Decoration: Sofá, Material: PLASTIC, Price: 65.30€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a0b"
+  },
+  "totalPrice": 73.8,
+  "date": {
+    "$date": "2020-12-10T00:00:00.000Z"
+  },
+  "productList": "Tree: Abies, Heigth: 4.1, Price: 31.50€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a0c"
+  },
+  "totalPrice": 69.2,
+  "date": {
+    "$date": "2015-02-28T00:00:00.000Z"
+  },
+  "productList": "Flower: Orquídeas, Color: Rosado, Price: 30.50€"
+},
+{
+  "_id": {
+    "$oid": "65d424f8f889a20904ee1a0d"
+  },
+  "totalPrice": 84.3,
+  "date": {
+    "$date": "2016-06-10T00:00:00.000Z"
+  },
+  "productList": "Flower: Rosas, Color: Rojo, Price: 15.50€"
+}]

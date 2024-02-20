@@ -1,4 +1,4 @@
-Contenido del directorio: Directorio Ejemplo Java Utils
+Contenido del directorio: /Users/sebastian/Coding/Bootcamp_IT_Academy/Sprint 1/Proj.IntelliJ/Sprint 1/Directorio Ejemplo Java Utils
 - Ejemplo (File) - Ultima fecha de modificación: 23-11-2023
 
 Directorio:

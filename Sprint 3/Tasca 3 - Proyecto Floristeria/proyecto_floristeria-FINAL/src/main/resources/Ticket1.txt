@@ -1,0 +1,5 @@
+Ticket nº 1
+Date: 2015-03-10
+Product    Name    Description     Price
+Flower: Rosas, Color: Rojo, PRICE: 15.50€
+Tree: Abeto, Heigth: 4.1, Price: 42.70€

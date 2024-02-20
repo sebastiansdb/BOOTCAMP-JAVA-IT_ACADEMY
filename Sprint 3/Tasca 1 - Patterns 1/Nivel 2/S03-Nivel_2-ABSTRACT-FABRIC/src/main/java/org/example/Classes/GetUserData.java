@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class GetUserData {
     static Scanner sc = new Scanner (System.in);
+
     public static String getString(String message){
         System.out.println(message);
         return sc.nextLine();
