@@ -11,7 +11,7 @@ public class S1_T5_N1_Ejercicio3 {
     public static void main(String[] args) {
         String route = "Directorio Ejemplo Java Utils";
         String resultsRoute = "ListadoArbolFicheros.txt";
-        FileWriter writer = null;
+        FileWriter writer = null;º
         try {
             writer = new FileWriter(resultsRoute);
             writer.write("Contenido del directorio: " + route + "\n");
