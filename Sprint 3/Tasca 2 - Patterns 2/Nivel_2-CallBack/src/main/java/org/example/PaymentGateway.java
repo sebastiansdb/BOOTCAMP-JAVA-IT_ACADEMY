@@ -2,8 +2,8 @@ package org.example;
 
 public class PaymentGateway
 {
-    PaymentMethod EventListener;
-    double price;
+    private PaymentMethod EventListener;
+    private double price;
 
     public PaymentGateway(PaymentMethod EventListener)
     {

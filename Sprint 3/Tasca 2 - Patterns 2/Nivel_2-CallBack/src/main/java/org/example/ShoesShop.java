@@ -6,7 +6,7 @@ import java.util.List;
 public class ShoesShop
 {
     private String shopName;
-    List<PaymentGateway> paymentList;
+    private List<PaymentGateway> paymentList;
 
     public ShoesShop (String shopName)
     {
