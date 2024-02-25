@@ -1,4 +1,4 @@
-package s04.t01.n01.S04T01N01.controllers;
+package com.S04T01N01.controlers;
 
 import org.springframework.web.bind.annotation.*;
 

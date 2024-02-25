@@ -1,4 +1,4 @@
-package s04.t01.n01.S04T01N01;
+package com.S04T01N01;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
