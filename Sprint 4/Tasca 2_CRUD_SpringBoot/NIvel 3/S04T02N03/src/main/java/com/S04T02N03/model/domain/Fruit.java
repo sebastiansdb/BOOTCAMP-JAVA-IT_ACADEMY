@@ -1,4 +1,4 @@
-package com.S04T02N01.model;
+package com.S04T02N03.model.domain;
 
 import jakarta.persistence.*;
 
@@ -11,29 +11,33 @@ import jakarta.persistence.*;
 – @Column annotation is used to define the column in database that maps annotated field.
  */
 
+
 @Entity
 @Table(name = "fruits")
 public class Fruit {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-   @Column(name = "name")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    @Column(name = "name")
     private String name;
-   @Column(name = "quantity Kg")
-    private int quantityKg;
+    @Column(name = "quantity Kg")
+    private double quantityKg;
 
-    public Fruit(int id, String name, int quantityKg) {
+    public Fruit(){
+
+    }
+    public Fruit(long id, String name, double quantityKg){
         this.id = id;
         this.name = name;
         this.quantityKg = quantityKg;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -45,11 +49,11 @@ public class Fruit {
         this.name = name;
     }
 
-    public int getQuantityKg() {
+    public double getQuantityKg() {
         return quantityKg;
     }
 
-    public void setQuantityKg(int quantityKg) {
+    public void setQuantityKg(double quantityKg) {
         this.quantityKg = quantityKg;
     }
 

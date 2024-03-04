@@ -1,11 +1,8 @@
-package com.S04T02N01.repository;
+package com.S04T02N02.model.repository;
 
-import com.S04T02N01.model.Fruit;
+import com.S04T02N02.model.domain.Fruit;
 import org.springframework.data.jpa.repository.JpaRepository;
-public interface FruitRepository extends JpaRepository<Fruit,Integer> {
-}
-// DUDA
-// POR QUE LA INTERFACE JPAREPOSITORY TIENE METODOS IMPLEMENTADOS (ya que es una interface) ??
+import org.springframework.stereotype.Repository;
 
 /*
 As we make FruitRepository interface extends JpaRepository, we are able to use JpaRepository’s methods: save(),
@@ -19,3 +16,6 @@ Spring Data JPA: https://docs.spring.io/spring-data/jpa/reference/
 More Derived queries at:
 JPA Repository query example in Spring Boot:https://www.bezkoder.com/jpa-repository-query/
  */
+@Repository
+public interface FruitRepository extends JpaRepository<Fruit, Long> {
+}
