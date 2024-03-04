@@ -1,6 +1,10 @@
 package com.S04T02N03.model.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 /*
 – @Entity annotation indicates that the class is a persistent Java class.
@@ -11,49 +15,25 @@ import jakarta.persistence.*;
 – @Column annotation is used to define the column in database that maps annotated field.
  */
 
-
-@Entity
-@Table(name = "fruits")
+@Document(collection = "fruits")
 public class Fruit {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @Column(name = "name")
+    private String id;
+    @Field(name = "name")
+    @Getter
+    @Setter
     private String name;
-    @Column(name = "quantity Kg")
+    @Field(name = "quantity Kg")
+    @Getter
+    @Setter
     private double quantityKg;
 
     public Fruit(){
 
     }
-    public Fruit(long id, String name, double quantityKg){
-        this.id = id;
+    public Fruit(String name, double quantityKg) {
         this.name = name;
-        this.quantityKg = quantityKg;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getQuantityKg() {
-        return quantityKg;
-    }
-
-    public void setQuantityKg(double quantityKg) {
         this.quantityKg = quantityKg;
     }
 

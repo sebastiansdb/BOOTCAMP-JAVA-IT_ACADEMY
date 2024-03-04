@@ -19,5 +19,5 @@ More Derived queries at:
 JPA Repository query example in Spring Boot:https://www.bezkoder.com/jpa-repository-query/
  */
 @Repository
-public interface FruitRepository extends MongoRepository<Fruit,Long>{
+public interface FruitRepository extends MongoRepository<Fruit,String>{
 }

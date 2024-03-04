@@ -28,18 +28,23 @@ public class FruitService {
     }
 
     // get by id
-    public Optional<Fruit> getFruitById(long id){
-        return fruitRepository.findById(longToIntCast(id));
+    public Optional<Fruit> getFruitById(String id){
+        return fruitRepository.findById(id);
 
     }
     // delete by id
-    public void deleteById(long id){
-        fruitRepository.deleteById(longToIntCast(id));
+    public void deleteById(String id){
+        fruitRepository.deleteById(id);
     }
     // update by id
-    public Fruit updateFruit(long id, String name, double quantityKg){
-        Optional<Fruit> fruitToUpdateOptional = fruitRepository.findById(longToIntCast(id));
+    public Fruit updateFruit(String id, String name, double quantityKg){
+        Optional<Fruit> fruitToUpdateOptional = fruitRepository.findById(id);
         Fruit updatedFruit = null;
+        // DUDA: ES BUENA PRACTICA INICIALIZAR EN NULL, EN ESTE CASO?
+        // No lo es.
+        // Uno de los motivos es porque podemos olvidarnos de checkear los nulls y el programa
+        // puede llegar a romper por dicho motivo
+        // Lo ideal ees crear una clase HANDLER EXCEPTIONS y manejar todo desde alli.
         if(fruitToUpdateOptional.isPresent()){
             updatedFruit = fruitToUpdateOptional.get();
             updatedFruit.setName(name);

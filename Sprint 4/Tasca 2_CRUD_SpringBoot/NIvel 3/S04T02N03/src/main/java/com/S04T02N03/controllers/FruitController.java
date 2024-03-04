@@ -29,7 +29,7 @@ public class FruitController {
     }
 
     @GetMapping("/getOne/{id}")
-    public ResponseEntity<?> getFruitById(@PathVariable long id){
+    public ResponseEntity<?> getFruitById(@PathVariable String id){
         Optional<Fruit> fruitOptional = fruitService.getFruitById(id);
         if(fruitOptional.isPresent()){
             return ResponseEntity.ok(fruitOptional.get());
@@ -44,7 +44,7 @@ public class FruitController {
         }
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> deleteFruit(@PathVariable long id){
+    public ResponseEntity<?> deleteFruit(@PathVariable String id){
         Optional<Fruit> fruitOptional = fruitService.getFruitById(id);
         if(fruitOptional.isPresent()){
             fruitService.deleteById(id);
@@ -55,7 +55,7 @@ public class FruitController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> updateFruit(@PathVariable long id,
+    public ResponseEntity<?> updateFruit(@PathVariable String id,
                                              @RequestParam String name,
                                              @RequestParam double quantityKg
     ){
