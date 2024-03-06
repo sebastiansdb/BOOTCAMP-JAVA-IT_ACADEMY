@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title> BranchOffice Managment System </title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2">
+    <h1> BranchOffice Managment System </h1>
+    <hr>
+    <h2> Save Branch Office </h2>
+    <form action="#" th:action="@{/branch/saveBranchOffice}" th:object= branchOfficeDTO method="POST">
+
+        <input type="text" th:field="*{branchName}" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{branchCountry}" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{branchType}" class="form-control mb-4 col-4">
+        <button type="submit" class="btn btn-info col-2"> Save Branch Office </button>
+    </form>
+</div>
+</body>
+</html>
