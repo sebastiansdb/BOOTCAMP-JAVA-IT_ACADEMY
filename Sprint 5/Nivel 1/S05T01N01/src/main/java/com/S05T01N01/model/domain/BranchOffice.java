@@ -15,7 +15,7 @@ import lombok.ToString;
 @NoArgsConstructor
 public class BranchOffice {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pk_branchID;
     @Column(name = "branch name")
     private String branchName;

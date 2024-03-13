@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title> BranchOffice Managment System </title>
+    <title> BranchOffice Management System </title>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -20,6 +20,7 @@
             <th>Branch Name</th>                        <!-- table´s row header -->
             <th>Branch Country</th>
             <th>Branch Type</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -30,6 +31,11 @@
             <td th:text="${branch.branchName}"></td>
             <td th:text="${branch.branchCountry}"></td>
             <td th:text="${branch.branchType}"></td>
+
+            <td>
+                <a th:href="@{/branch/showFormForUpdate/{id}(id=${branch.pk_branchID})}" class="btn btn-primary">Update</a>
+                <a th:href="@{/branch/delete/{id}(id=${branch.pk_branchID})}" class="btn btn-danger">Delete</a>
+            </td>
         </tr>
         </tbody>
     </table>

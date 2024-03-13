@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title> BranchOffice Managment System </title>
+    <title> BranchOffice Management System </title>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -10,16 +10,18 @@
 </head>
 <body>
 <div class="container my-2">
-    <h1> BranchOffice Managment System </h1>
+    <h1> BranchOffice Management System </h1>
     <hr>
     <h2> Save Branch Office </h2>
-    <form action="#" th:action="@{/branch/saveBranchOffice}" th:object= branchOfficeDTO method="POST">
-
-        <input type="text" th:field="*{branchName}" class="form-control mb-4 col-4">
-        <input type="text" th:field="*{branchCountry}" class="form-control mb-4 col-4">
-        <input type="text" th:field="*{branchType}" class="form-control mb-4 col-4">
-        <button type="submit" class="btn btn-info col-2"> Save Branch Office </button>
+    <form action="#" th:action="@{/branch/saveBranchOffice}" th:object= "${branchOfficeDTO}" branchOfficeDTO method="POST">
+        <!-- "${branchOfficeDTO}" es el nombre del objeto en el metodo del controlador, el que tiene
+        "@{/branch/saveBranchOffice}", en donde se cargarán los datos recibidos desde el cliente  -->
+        <input type="text" th:field="*{branchName}" placeholder="Branch Name" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{branchCountry}" placeholder="Branch Country" class="form-control mb-4 col-4">
+        <button type="submit" class="btn btn-info col-2"> Update Branch Office </button>
     </form>
+    <hr>
+    <a th:href = "@{/branch/}"> Back to BranchOffice List</a>
 </div>
 </body>
 </html>
