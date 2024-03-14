@@ -1,5 +1,6 @@
 package com.S05T01N01.model.services;
 
+import com.S05T01N01.exceptions.BadRquestException;
 import com.S05T01N01.exceptions.ResourceNotFoundException;
 import com.S05T01N01.model.domain.BranchOffice;
 import com.S05T01N01.model.dto.BranchOfficeDTO;
@@ -32,12 +33,16 @@ public class BranchServiceImpl implements BranchService {
     }
 
     // delete by id
-    public void deleteById(long pk_branchID){
-        Optional<BranchOffice> branchOfficeToDeleteOptional = branchRepository.findById(pk_branchID);
-        if (branchOfficeToDeleteOptional.isPresent()){
-            branchRepository.delete(branchOfficeToDeleteOptional.get());
-        } else{
-            throw new ResourceNotFoundException("branch office to delete","id",pk_branchID);
+    public void deleteById(Long pk_branchID){
+        if(pk_branchID == null){
+            throw new BadRquestException("id must not be null");
+        } else {
+            Optional<BranchOffice> branchOfficeToDeleteOptional = branchRepository.findById(pk_branchID);
+            if (branchOfficeToDeleteOptional.isPresent()) {
+                branchRepository.delete(branchOfficeToDeleteOptional.get());
+            } else {
+                throw new ResourceNotFoundException("branch office to delete", "id", pk_branchID);
+            }
         }
     }
 
@@ -45,20 +50,19 @@ public class BranchServiceImpl implements BranchService {
 
     // get one by id
     public BranchOfficeDTO getDTOById(Long pk_branchID) {
-//        try {
+        if(pk_branchID == null) {
+            throw new BadRquestException("id must not be null");
+        } else {
             Optional<BranchOffice> branchOfficeOptional = branchRepository.findById(pk_branchID);
-            BranchOfficeDTO branchOfficeDTOToUpdate;
+            BranchOfficeDTO branchOfficeDTO;
             if (branchOfficeOptional.isPresent()) {
-                branchOfficeDTOToUpdate = DTOConversor.convertExistingBranchOfficeToDTO(branchOfficeOptional.get());
+                branchOfficeDTO = DTOConversor.convertExistingBranchOfficeToDTO(branchOfficeOptional.get());
             } else {
-                throw new ResourceNotFoundException("branch office to delete", "id", pk_branchID);
+                throw new ResourceNotFoundException("branch office", "id", pk_branchID);
             }
 
-            return branchOfficeDTOToUpdate;
-//        } catch (DataAccessException exDt){
-        // Borrar clase "BadRquestException" si no la uso
-//            throw new BadRquestException(exDt.getMessage());
-//        }
+            return branchOfficeDTO;
+        }
     }
     // get all
     @Override
@@ -70,14 +74,14 @@ public class BranchServiceImpl implements BranchService {
     // save
     @Override
     public void saveBranchOfficeDTO (BranchOfficeDTO branchOfficeDTO){
-        saveBranchOffice(DTOConversor.convertToNewBranchOffice(branchOfficeDTO));
+        saveBranchOffice(DTOConversor.convertDTOToNewBranchOffice(branchOfficeDTO));
     }
 
     // update
     @Override
     public void updateBranchOfficeDTO(BranchOfficeDTO branchOfficeDTOToUpdate){
         // Se ha checkeado previamente que la sucursal ya esté creada en la base de datos (en el metodo "getDTOById")
-        saveBranchOffice(DTOConversor.convertToBranchOffice(branchOfficeDTOToUpdate));
+        saveBranchOffice(DTOConversor.convertDTOToExistingBranchOffice(branchOfficeDTOToUpdate));
     }
 
 }

@@ -7,10 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-
-/* TO DO
-    VALIDACIONES: https://www.youtube.com/watch?v=Ef2Y0YsQJCE
- */
 @Controller
 @RequestMapping("/branch")
 public class BranchController {
@@ -18,11 +14,9 @@ public class BranchController {
     @Autowired
     private BranchServiceImpl branchServiceImpl;
 
-    // DUDA:
-    // 1- creo que el get one by id no hace falta porque ya tengo implementada la vista thymeleaf con la lista de todas
-    // las sucursales
-    // 2- Try catch. Metodo : "BranchOfficeDTO". Si la base de datos esta desactivada, por qué no recibo mensaje de la excepcion??
-    // Hacen falta los try catch por no conexxion a la BBDD ? CUnado se lanzarian las excepciones?
+    // Comentarios:
+    // Creo que el enpoint "get one by id" no hace falta implementarlo porque ya tengo implementada la vista thymeleaf
+    // con la lista de todas las sucursales
 
 
     // Home View - Get All

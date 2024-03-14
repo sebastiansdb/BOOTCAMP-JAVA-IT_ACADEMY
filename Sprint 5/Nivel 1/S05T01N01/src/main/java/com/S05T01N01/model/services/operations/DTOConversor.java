@@ -16,15 +16,15 @@ public class DTOConversor {
     }
     // Convert DTO to new Branch
     /*
-        Cuando la sucursal no existe y recibo un DTO para crearla, devo intanciar una new BranchOffice sin "id" para que
-        éste se genere automaticamente
+        Cuando la sucursal no existe y recibo un DTO para crearla, debo instanciar una new BranchOffice sin "id" para que
+        éste se genere automáticamente
      */
-    public static BranchOffice convertToNewBranchOffice(BranchOfficeDTO branchOfficeDTO){
+    public static BranchOffice convertDTOToNewBranchOffice(BranchOfficeDTO branchOfficeDTO){
         return new BranchOffice(branchOfficeDTO.getBranchName(), branchOfficeDTO.getBranchCountry());
     }
 
     // Convert DTO to existing Branch
-    public static BranchOffice convertToBranchOffice(BranchOfficeDTO branchOfficeDTO){
+    public static BranchOffice convertDTOToExistingBranchOffice(BranchOfficeDTO branchOfficeDTO){
         BranchOffice newBranchOffice = new BranchOffice();
         newBranchOffice.setPk_branchID(branchOfficeDTO.getPk_branchID());
         newBranchOffice.setBranchName(branchOfficeDTO.getBranchName());

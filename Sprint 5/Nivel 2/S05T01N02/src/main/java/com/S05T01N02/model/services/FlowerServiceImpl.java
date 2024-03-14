@@ -37,7 +37,7 @@ public class FlowerServiceImpl implements FlowerService {
 
         // VER EXCEPCIONES conexion BBDD
         if (id == null) {
-            throw new BadRquestException("id"); // must not be null");
+            throw new BadRquestException("id");
         } else {
             return flowerRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("The flower", "id", id));
         }
