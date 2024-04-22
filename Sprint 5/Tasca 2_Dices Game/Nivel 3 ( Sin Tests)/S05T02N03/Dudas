@@ -1,0 +1,43 @@
+- GameServiceImpl:
+
+ // Esta bien hacer esto con autowired ??:
+ @Autowired
+     PlayerServiceImpl playerServiceImpl;
+
+ // delete all games from a player
+
+
+- GameController:
+
+ // Ver si es objeto GameService o GameServiceImpl
+
+
+ - PlayerController
+
+  // Dudas de arriba de todo
+
+ // Por qué si sacao @NoArgsConstructor de PlayerEntity, me tira un error cuando consulto "Get All Players" ??
+
+
+- GameEntity:
+
+ // fetch = FetchType.LAZY ???
+
+
+- PlayerEntity:
+
+ // new arraylist of games.
+
+
+- PlayerServiceImpl:
+
+ //  public List<PlayerEntityDTO> getLoserPlayer()
+
+ // update player´s name ( Excepciones )
+
+
+                            - SEGURIDAD -
+
+- PlayerServiceImpl:
+
+ // USER - add new player
