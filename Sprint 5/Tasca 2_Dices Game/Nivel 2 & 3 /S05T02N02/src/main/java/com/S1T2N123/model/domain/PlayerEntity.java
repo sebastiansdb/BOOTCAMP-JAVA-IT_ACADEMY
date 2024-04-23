@@ -21,11 +21,11 @@ public class PlayerEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "player_Id")
     private Long playerId;
-    @Column (name = "player")
+    @Column (name = "player_name")
     private String playerName;
-    @Column (name = "register data")
+    @Column (name = "register_data")
     private Date registerDate;
-    @Column (name = "user email")
+    @Column (name = "user_email")
     private String userEmail;
 
     // Database relations

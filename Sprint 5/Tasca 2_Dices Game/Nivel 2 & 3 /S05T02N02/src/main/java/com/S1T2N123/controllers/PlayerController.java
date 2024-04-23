@@ -27,13 +27,14 @@ public class PlayerController {
     @Autowired
     private PlayerService playerServiceImpl;
 
-    // "CREATE A NEW PLAYER" -- add new playerEntity
+    // "CREATE A NEW PLAYER"
     @PostMapping("")
     @Operation(summary = "CREATE A NEW PLAYER", description =
             "Insert the playerEntity name or insert nothing for registering yourself an 'Anonymous' playerEntity ")
     public ResponseEntity<ResponseMessage<PlayerEntityDTO>> addNewPlayer(@RequestBody PlayerEntityDTO playerEntityDTO) {
         ResponseMessage<PlayerEntityDTO> playerResponseMessage =
                 new ResponseMessage<>("Player created", playerServiceImpl.addNewPlayer(playerEntityDTO));
+
         return ResponseEntity.status(HttpStatus.OK).body(playerResponseMessage);
     }
 
@@ -43,9 +44,11 @@ public class PlayerController {
     @PutMapping("")
     @Operation(summary = "UPDATE PLAYER", description = "Insert the player´s old name and the player´s new name")
     public ResponseEntity<ResponseMessage<PlayerEntityDTO>> updatePlayer(@RequestBody String[] updatedPlayerArr){
+
         ResponseMessage<PlayerEntityDTO> playerResponseMessage =
                 new ResponseMessage<>("PlayerEntity´s name updated succesfully",
                         playerServiceImpl.updatePlayerName(updatedPlayerArr));
+
         return ResponseEntity.status(HttpStatus.OK).body(playerResponseMessage);
     }
 
@@ -53,8 +56,10 @@ public class PlayerController {
     @GetMapping("/")
     @Operation(summary = "GET THE PLAYER´S LIST AND EACH AVERAGE SUCCESS RATE")
     public ResponseEntity<ResponseMessage<List<PlayerEntityDTO>>> getAllPlayers() {
+
         ResponseMessage<List<PlayerEntityDTO>> playersResponseMessage =
                 new ResponseMessage<>("Player´s List:", playerServiceImpl.getAllPlayers());
+
         return ResponseEntity.status(HttpStatus.OK).body(playersResponseMessage);
     }
 
@@ -62,8 +67,10 @@ public class PlayerController {
     @GetMapping("/ranking")
     @Operation(summary = "GET THE AVERAGE SUCCESS RATE OF ALL PLAYERS")
     public ResponseEntity<ResponseMessage<Double>> getRanking(){
+
         ResponseMessage<Double> rankingResponseMessage = new ResponseMessage<>("Average success rate of all players:",
                 playerServiceImpl.getAverageSuccessRate());
+
         return ResponseEntity.status(HttpStatus.OK).body(rankingResponseMessage);
     }
 
@@ -71,6 +78,7 @@ public class PlayerController {
     @GetMapping("/ranking/loser")
     @Operation(summary = "GET THE PLAYER/S WITH THE WORST SUCCESS RATE", description = "THE LOSER/S PLAYER/S")
     public ResponseEntity<ResponseMessage<List<PlayerEntityDTO>>> getLoserPlayer(){
+
         List<PlayerEntityDTO> playerEntityDTOList = playerServiceImpl.getLoserPlayer();
         if (playerEntityDTOList == null){
             ResponseMessage<List<PlayerEntityDTO>> responseMessageOnePLayer = new ResponseMessage<>("There are " +
@@ -87,6 +95,7 @@ public class PlayerController {
     @GetMapping("/ranking/winner")
     @Operation(summary = "GET THE PLAYER/S WITH THE BEST SUCCESS RATE", description = "THE WINNER/S PLAYER/S")
     public ResponseEntity<ResponseMessage<List<PlayerEntityDTO>>> getWinnerPlayer(){
+
         List<PlayerEntityDTO> playerEntityDTOList = playerServiceImpl.getWinnerPlayer();
         if (playerEntityDTOList == null){
             ResponseMessage<List<PlayerEntityDTO>> responseMessageOnePLayer = new ResponseMessage<>("There is " +

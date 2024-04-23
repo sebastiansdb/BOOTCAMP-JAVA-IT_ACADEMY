@@ -5,7 +5,6 @@ import com.S1T2N123.conversions.GameEntityMapper;
 import com.S1T2N123.exceptions.EmptyListException;
 import com.S1T2N123.exceptions.ResourceNotFoundException;
 import com.S1T2N123.model.domain.PlayerEntity;
-import com.S1T2N123.model.dto.GameEntityDTO;
 import com.S1T2N123.model.dto.PlayerEntityDTO;
 import com.S1T2N123.model.repositories.PlayerRepository;
 import com.S1T2N123.model.services.interfaces.PlayerService;
