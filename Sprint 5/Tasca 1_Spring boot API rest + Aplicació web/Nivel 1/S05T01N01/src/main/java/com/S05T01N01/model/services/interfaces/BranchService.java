@@ -1,4 +1,4 @@
-package com.S05T01N01.model.services.servicesInterfaces;
+package com.S05T01N01.model.services.interfaces;
 
 import com.S05T01N01.model.domain.BranchOffice;
 import com.S05T01N01.model.dto.BranchOfficeDTO;

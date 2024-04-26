@@ -1,14 +1,12 @@
 package S05T01N03.controller;
 
 import S05T01N03.model.dto.FlowerEntityDTO;
-import S05T01N03.model.service.FlowerServiceImpl;
+import S05T01N03.model.service.implementations.FlowerServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/flower")

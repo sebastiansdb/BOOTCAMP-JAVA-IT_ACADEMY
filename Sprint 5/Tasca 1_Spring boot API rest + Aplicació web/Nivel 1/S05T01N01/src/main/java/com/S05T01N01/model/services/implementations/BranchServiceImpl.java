@@ -1,12 +1,12 @@
-package com.S05T01N01.model.services;
+package com.S05T01N01.model.services.implementations;
 
 import com.S05T01N01.exceptions.BadRquestException;
 import com.S05T01N01.exceptions.ResourceNotFoundException;
 import com.S05T01N01.model.domain.BranchOffice;
 import com.S05T01N01.model.dto.BranchOfficeDTO;
 import com.S05T01N01.model.repository.BranchRepository;
-import com.S05T01N01.model.services.operations.DTOConversor;
-import com.S05T01N01.model.services.servicesInterfaces.BranchService;
+import com.S05T01N01.convertions.DTOConversor;
+import com.S05T01N01.model.services.interfaces.BranchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

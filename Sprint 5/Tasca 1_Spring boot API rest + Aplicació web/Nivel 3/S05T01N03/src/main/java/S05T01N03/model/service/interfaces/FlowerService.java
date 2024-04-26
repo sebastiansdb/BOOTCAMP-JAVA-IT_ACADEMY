@@ -1,4 +1,4 @@
-package S05T01N03.model.service.serivceInterface;
+package S05T01N03.model.service.interfaces;
 
 
 import S05T01N03.model.dto.FlowerEntityDTO;

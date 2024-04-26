@@ -1,11 +1,11 @@
-package com.S05T01N02.model.services;
+package com.S05T01N02.model.services.implementatios;
 
 import com.S05T01N02.exceptions.BadRquestException;
 import com.S05T01N02.exceptions.ResourceNotFoundException;
 import com.S05T01N02.model.domain.FlowerEntity;
 import com.S05T01N02.model.dto.FlowerEntityDTO;
 import com.S05T01N02.model.repository.FlowerRepository;
-import com.S05T01N02.model.services.serviceInterfaces.FlowerService;
+import com.S05T01N02.model.services.interfaces.FlowerService;
 import com.S05T01N02.operatios.DTOConversor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

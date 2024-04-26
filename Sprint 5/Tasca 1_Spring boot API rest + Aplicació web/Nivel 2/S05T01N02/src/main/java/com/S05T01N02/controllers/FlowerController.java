@@ -2,7 +2,7 @@ package com.S05T01N02.controllers;
 
 import com.S05T01N02.message.ResponseMessage;
 import com.S05T01N02.model.dto.FlowerEntityDTO;
-import com.S05T01N02.model.services.FlowerServiceImpl;
+import com.S05T01N02.model.services.implementatios.FlowerServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

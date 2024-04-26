@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // 									Posible TO DO :))
 
-//	( Voy corto de tiempo, lo investigaré en otro momento )
 // Colocar titulos y/o descripciones en cada operacion del SWAGGER
 
 @SpringBootApplication

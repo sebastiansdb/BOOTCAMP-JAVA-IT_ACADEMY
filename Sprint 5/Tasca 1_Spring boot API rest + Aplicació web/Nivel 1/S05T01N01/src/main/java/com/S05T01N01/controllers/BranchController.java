@@ -1,7 +1,7 @@
 package com.S05T01N01.controllers;
 
 import com.S05T01N01.model.dto.BranchOfficeDTO;
-import com.S05T01N01.model.services.BranchServiceImpl;
+import com.S05T01N01.model.services.implementations.BranchServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,9 +1,9 @@
-package S05T01N03.model.service;
+package S05T01N03.model.service.implementations;
 
 import S05T01N03.exceptions.ResourceNotFoundException;
 import S05T01N03.message.ResponseMessage;
 import S05T01N03.model.dto.FlowerEntityDTO;
-import S05T01N03.model.service.serivceInterface.FlowerService;
+import S05T01N03.model.service.interfaces.FlowerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.S05T01N02.model.services.serviceInterfaces;
+package com.S05T01N02.model.services.interfaces;
 
 import com.S05T01N02.model.domain.FlowerEntity;
 import com.S05T01N02.model.dto.FlowerEntityDTO;
